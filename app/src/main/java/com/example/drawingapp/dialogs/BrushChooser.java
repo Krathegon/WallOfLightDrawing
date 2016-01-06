@@ -94,17 +94,6 @@ public class BrushChooser extends DialogFragment {
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnBrushClickListener) {
-            mListener = (OnBrushClickListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnBrushClickListener");
-        }
-    }
-
-    @Override
     public void onDestroy() {
         super.onDestroy();
         mListener = null;
